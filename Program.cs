@@ -47,3 +47,4 @@ for (int i = 0; i < friends.Length; i++)
     Console.WriteLine($"Hello, {friends[i]}!");
 }
 */
+
