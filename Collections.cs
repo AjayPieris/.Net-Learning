@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic; // Needed for List<T>
+using System.Linq;
 
 class Program
 {
@@ -70,6 +71,20 @@ else
 {
     Console.WriteLine("Dad is not in the phonebook.");
 }
+
+ List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+        // THE LINQ MAGIC
+        // Read this as: "Go through 'numbers'. For each 'n', keep it WHERE n modulo 2 equals 0."
+        var evenNumbers = numbers.Where(n => n % 2 == 0).ToList();
+
+        Console.WriteLine("Even Numbers:");
+        foreach (int num in evenNumbers)
+        {
+            Console.WriteLine(num);
+        }
+
+        
     }
 }
 
