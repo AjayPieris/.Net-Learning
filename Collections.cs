@@ -46,6 +46,30 @@ class Program
         {
             Console.WriteLine(guest);
         }
+
+        // 1. Create the Dictionary
+// Key = string (Name), Value = string (Phone Number)
+Dictionary<string, string> phonebook = new Dictionary<string, string>();
+
+// 2. Add items
+phonebook.Add("Ajay", "123456");
+phonebook.Add("Mom", "123457");
+
+// 3. Look up a value (Lightning Fast!)
+// We ask for "Mom", it gives us the number.
+string momsNumber = phonebook["Mom"]; 
+Console.WriteLine($"Mom's Number is: {momsNumber}");
+
+// 4. Safety Check (Very Important)
+// If you ask for "Dad" but he isn't in the list, the program crashes!
+if (phonebook.ContainsKey("Dad"))
+{
+    Console.WriteLine(phonebook["Dad"]);
+}
+else
+{
+    Console.WriteLine("Dad is not in the phonebook.");
+}
     }
 }
 
